@@ -1,0 +1,256 @@
+body {
+    background-color: rgb(180, 207, 237);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: .5rem;
+}
+
+header {
+    margin-left: 2%;
+    margin-right: 29%;
+    height: 1rem;
+    background-color: #FFFFFF;
+    box-shadow: 0 5px;
+}
+
+footer {
+    margin-left: 2%;
+    margin-right: 29%;
+    margin-top: 2rem;
+    height: 1rem;
+    background-color: #FFFFFF;
+    box-shadow: 0 -5px;
+
+    & p {
+        padding-top: .5%;
+        text-align: center;
+        font-size: xx-small;
+        font-weight: bold;
+    }
+}
+
+/*------ FORMATO TEXTO ------*/
+
+h1 {
+    text-align: center;
+    text-shadow: 2px 3px #FFFFFF;
+    margin-top: 2rem;
+}
+
+h2 {
+    text-shadow: 2px 2px burlywood;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+/*------ IMAGENES ------*/
+
+img {
+    width: 40%;
+    height: 50%;
+    border-radius: 10px;
+    box-shadow: 5px 5px burlywood;
+    margin-top: 3%;
+}
+
+#imgInicial {
+    padding-left: 2.5rem;
+    box-shadow: 0 0 0;
+    width: 80%;
+    margin-top: 0;
+}
+
+/*------ BOTONES ------*/
+
+button {
+    background-color: rgb(85, 116, 199);
+    color: rgb(225, 225, 225);
+    font-weight: bolder;
+    padding: 10px;
+    border-radius: 10px;
+    width: 62%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 0;
+    width: 7rem;
+}
+
+button:hover {
+    cursor: pointer;
+    box-shadow: 5px 5px rgb(225, 225, 225);
+    border: 3px solid rgb(225, 225, 225);
+}
+
+.botones {
+    display: grid;
+    grid-template-rows: 6rem 8rem;
+    justify-content: center;
+    justify-items: center;
+    align-items: center
+}
+
+/*------ CUERPO INFO ------*/
+
+#intro {
+    text-align: center;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.principal {
+    display: grid;
+    grid-template-columns: 70% 23%;
+    align-items: flex-start;
+    column-gap: 5%;
+    min-height: 35.5rem;
+}
+
+.contenido {
+    display: flex;
+    background-color: white;
+    align-items: flex-start;
+    padding: 20px;
+    padding-top: 1rem;
+    border-radius: 10px;
+    width: 85%;
+    margin-top: 20px;
+    min-height: 3rem;
+}
+
+.informacion {
+    display: grid;
+    grid-template-columns: 20% 80%;
+    align-items: flex-start;
+    justify-content: center;
+    padding-left: 3rem;
+    gap: 1rem;
+}
+
+.informacionCocktail {
+    padding-left: 5%;
+    padding-right: 2rem;
+    width: 300%
+}
+
+/*------ CARGA ------*/
+
+progress {
+    width: 10rem;
+    height: 1rem;
+}
+
+.pantCarga {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding-bottom: 1rem;
+}
+
+/*------- FAVORITOS -------*/
+
+.cocktailFav {
+    background-color: #8d4539;
+    color: #FFFFFF;
+    padding: 20px;
+    border-radius: 10px;
+    width: 15rem;
+    margin-top: 2rem;
+    top: 1rem;
+    right: 1rem;
+    height: 90%;
+}
+
+#favoritos {
+    border-radius: 50%;
+    padding: 5px;
+    width: 5.5rem;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #8d4539;
+}
+
+#fav {
+    color: #FFFFFF;
+    background-color: burlywood;
+    border-radius: 10px;
+    padding: 5px;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+/*------ DETALLES ------*/
+
+#detalles {
+    background-color: #FFFFFF;
+    color: #8d4539;
+    margin-top: 0;
+
+    &:hover {
+        box-shadow: 5px 5px burlywood;
+        border: 3px solid burlywood;
+    }
+}
+
+/*---------------------- CAMBIO DISEÑO ----------------------*/
+
+@media (max-width: 920px) {
+
+    body {
+        padding-left: 0;
+    }
+
+    header {
+        margin-right: -2%;
+    }
+
+    footer {
+        margin-right: -2%;
+    }
+
+    /*------ CUERPO INFO ------*/
+
+    .principal {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    } 
+
+    .contenido {
+        padding-left: 8%;
+        gap: 5%;
+    }
+
+    .informacionCocktail {
+        font-size: 90%;
+    }
+
+    .informacion {
+        display: grid;
+        grid-template-columns: 20% 80%;
+        align-items: flex-start;
+        justify-content: center;
+        padding-left: 5rem;
+        padding-right: 3rem;
+        gap: 10%;
+    }
+
+    /*------ BOTONES ------*/
+
+    button {
+        width: 100%;
+    }
+
+    #detalles {
+        width: 40%;
+    }
+
+    /*------ FAVORITOS ------*/
+
+    .cocktailFav {
+        width: 50%;
+    }
+}
